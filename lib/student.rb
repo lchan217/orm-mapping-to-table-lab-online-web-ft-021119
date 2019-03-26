@@ -25,8 +25,10 @@ class Student
      DB[:conn].execute(sql)
   end 
   def save 
-    sql = <<-SQL 
-      INSERT 
-    SQL 
+    sql = <<-SQL
+      INSERT INTO students (name, age) VALUES (?,?), 
+    SQL
   end 
 end
+
+#INSERT INTO cats (name, age, breed) VALUES ('Maru', 3, 'Scottish Fold');
